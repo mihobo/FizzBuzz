@@ -17,3 +17,15 @@ def fizzbuzz(num)
   else num.to_s
   end
 end
+
+# or below method - lets you do num.fizzbuzz
+class Integer
+  def fizzbuzz
+    case
+    when self % 15 == 0 then "fizzbuzz"
+    when self % 3 == 0 then "fizz"
+    when self % 5 == 0 then "buzz"
+    else self.to_s
+    end
+  end
+end
